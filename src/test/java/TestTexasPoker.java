@@ -84,4 +84,13 @@ public class TestTexasPoker {
         Assertions.assertEquals("White wins",result);
         System.out.println(result);
     }
+
+    //测试牌型相同大小相等
+    @Test
+    public void tetsSame(){
+        TexasPoker th = new TexasPoker("Black: AD 2D 3D 4D 5D White: AH 2H 3H 4H 5H");
+        String result = th.judge();
+        Assertions.assertEquals("Tie",result);
+        System.out.println(result);
+    }
 }
